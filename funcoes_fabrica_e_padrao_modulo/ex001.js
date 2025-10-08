@@ -10,6 +10,7 @@ const carro1 = new Carro("Toyota", "Vermelho")
 carro1.ligar()
 
 // Mesmo exemplo usando uma função de fábrica
+// Obs: Uma função de fábrica é uma função que cria e retorna objetos.
 function criarCarro(marca, cor) {
     function ligar() {
         console.log(`${marca} da cor ${cor} ligado!`)
