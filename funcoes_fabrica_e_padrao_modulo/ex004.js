@@ -1,6 +1,7 @@
 // Usando module pattern para criar um código de armazenamento de usuários
 
 // Variável que armazena o módulo, tudo dentro dele fica escondido, não podendo ser acessado por fora, somente o que for retornado no final fica acessível
+
 const controleUsuario = (function () {
     const usuarios = [] // Lista de usuários privada
 
@@ -10,7 +11,7 @@ const controleUsuario = (function () {
             nome,
             email,
             mostraInfo() {
-                console.log(`Usuário: ${nome}, email: ${email}`)
+                console.log(`Usuário: ${this.nome}, email: ${this.email}`)
             }
         }
     }
