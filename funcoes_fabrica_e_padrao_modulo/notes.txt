@@ -6,3 +6,5 @@
 - IIFE (Immediately Invoked Function Expression), é um padrão usado pra criar uma função e executá-la imediatamente. Serve para proteger variáveis e evitar poluição do escopo global
 
 - Module pattern => Organiza e protege o código. IIFE => executa imediatamente e encapsula. Funções de fábrica => Cria objetos de forma padronizada
+
+- 
