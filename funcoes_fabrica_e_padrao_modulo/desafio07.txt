@@ -8,3 +8,17 @@ Cada pedido é um objeto com itens, total e status.
 Métodos prototípicos: adicionarItem, finalizarPedido.
 
 O módulo mantém a lista de pedidos e só permite acesso a funções públicas, escondendo dados internos. */
+
+
+
+
+
+/* Explicação técnica do código: Usa um IIFE (Immediately Invoked Function Expression) para criar um escopo privado e retornar apenas o que é necessário. Nesse caso, ele retorna um objeto com a função criaPedidos.
+
+Define uma função construtora/fábrica chamada criaPedidos dentro do escopo do IIFE. Essa função cria objetos de pedidos com propriedades: item, qtd e status (com valor padrão "Em andamento").
+
+Adiciona um método mudaStatusPedido a cada pedido, permitindo alternar o status entre "Em andamento" e "Pedido finalizado".
+
+Exibe no console a criação do pedido imediatamente.
+
+A função criaPedidos é exposta publicamente pelo objeto retornado pelo IIFE (restaurante.criaPedidos). */
