@@ -1,10 +1,11 @@
 - Funções de fábrica são funções que criam e retornam objetos
 
 - Module pattern (padrão de módulo):
-    - É um modo de organizar o código em blocos (ou "caixinhas") não deixando variáveis e funções expostos para todo o programa. Serve para organizar o código em partes separadas, evitando que variáveis tenham o mesmo nome e gere um erro no código. Além disso, melhora o uso da memória, pois apenas o que está dentro do módulo é mantido ativo enquanto for necessário.
+    - É um modo de organizar o código em blocos (ou "caixinhas") não deixando variáveis e funções expostas para todo o programa. Serve para organizar o código em partes separadas, evitando que variáveis tenham o mesmo nome e gere um erro no código. Além disso, melhora o uso da memória, pois apenas o que está dentro do módulo é mantido ativo enquanto for necessário.
 
 - IIFE (Immediately Invoked Function Expression), é um padrão usado pra criar uma função e executá-la imediatamente. Serve para proteger variáveis e evitar poluição do escopo global
 
 - Module pattern => Organiza e protege o código. IIFE => executa imediatamente e encapsula. Funções de fábrica => Cria objetos de forma padronizada
 
-- 
+- Prototype (Protótipo):
+    - É um objeto especial que serve como modelo para outros objetos em JavaScript. Se uma propriedade ou método não existir no objeto, o JavaScript procura no seu prototype (isso é chamado de prototype chain). É usado para compartilhar métodos entre vários objetos sem duplicar código
