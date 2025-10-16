@@ -8,4 +8,4 @@
 - Module pattern => Organiza e protege o código. IIFE => executa imediatamente e encapsula. Funções de fábrica => Cria objetos de forma padronizada
 
 - Prototype (Protótipo):
-    - É um objeto especial que serve como modelo para outros objetos em JavaScript. Se uma propriedade ou método não existir no objeto, o JavaScript procura no seu prototype (isso é chamado de prototype chain). É usado para compartilhar métodos entre vários objetos sem duplicar código
+    - É um objeto especial que serve como modelo para outros objetos em JavaScript. Se uma propriedade ou método não existir no objeto, o JavaScript procura no seu prototype (isso é chamado de prototype chain). Quando se cria vários objetos a partir de uma função construtora, é melhor colocar os métodos no prototype, assim, todos os objetos compartilham o mesmo método, economizando memória e organizando melhor o código 
