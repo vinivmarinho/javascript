@@ -32,9 +32,18 @@ const moduloPersonagens = (function() {
         listaPersonagens.push(personagem)
         console.log(`${nome} foi adicionado à lista de personagens com ${HP} pontos de vida`)
     }
+    
+   function mostraPersonagens() {
+    listaPersonagens.forEach(p => {
+        console.log(p.nome)
+    })
+   }
     return {
-        addPersonagem
+        addPersonagem,
+        mostraPersonagens
     }
 })()
 
 const p1 = moduloPersonagens.addPersonagem("Mikey", "Mago")
+const p2 = moduloPersonagens.addPersonagem("Kojiro", "Espadachim")
+moduloPersonagens.mostraPersonagens()
