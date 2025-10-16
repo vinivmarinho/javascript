@@ -16,7 +16,7 @@ function Produto(nome, preco, qtdEstoque) {
     console.log(`Produto ${this.nome} criado`)
     console.log()
 }
-// Método de vender (do protótipo)
+// Métodos do protótipo
 Produto.prototype.vender = function(qtdVendida) {
     if (this.qtdEstoque >= qtdVendida) {
         this.qtdEstoque -= qtdVendida
@@ -27,5 +27,11 @@ Produto.prototype.vender = function(qtdVendida) {
         console.log("Quantidade excede o que existe no estoque")
     }
 }
+Produto.prototype.repor = function(qtdReposta) {
+    this.qtdEstoque += qtdReposta
+    console.log(`Quantida resposta no estoque: ${qtdReposta}`)
+    console.log(`Quantidade atual em estoque: ${this.qtdEstoque} `)
+}
 const p1 = new Produto("Lápis", 10.50, 10)
 p1.vender(9)
+p1.repor(20)
