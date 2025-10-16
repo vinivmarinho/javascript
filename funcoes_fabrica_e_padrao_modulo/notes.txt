@@ -1,11 +1,20 @@
 - Funções de fábrica são funções que criam e retornam objetos
 
 - Module pattern (padrão de módulo):
-    - É um modo de organizar o código em blocos (ou "caixinhas") não deixando variáveis e funções expostas para todo o programa. Serve para organizar o código em partes separadas, evitando que variáveis tenham o mesmo nome e gere um erro no código. Além disso, melhora o uso da memória, pois apenas o que está dentro do módulo é mantido ativo enquanto for necessário.
+    - É um modo de organizar o código em blocos não deixando variáveis e funções expostas para todo o programa. Serve para organizar o código em partes separadas, evitando que variáveis tenham o mesmo nome e gere um erro no código. Além disso, melhora o uso da memória, pois apenas o que está dentro do módulo é mantido ativo enquanto for necessário. Usa IFFE + retorno de um objeto para criar módulos com dados privados e métodos públicos
 
-- IIFE (Immediately Invoked Function Expression), é um padrão usado pra criar uma função e executá-la imediatamente. Serve para proteger variáveis e evitar poluição do escopo global
+- IIFE (Immediately Invoked Function Expression / Função auto executável), é um padrão usado pra criar uma função e executá-la imediatamente. Serve para proteger variáveis e evitar poluição do escopo global
 
 - Module pattern => Organiza e protege o código. IIFE => executa imediatamente e encapsula. Funções de fábrica => Cria objetos de forma padronizada
 
 - Prototype (Protótipo):
     - É um objeto especial que serve como modelo para outros objetos em JavaScript. Se uma propriedade ou método não existir no objeto, o JavaScript procura no seu prototype (isso é chamado de prototype chain). Quando se cria vários objetos a partir de uma função construtora, é melhor colocar os métodos no prototype, assim, todos os objetos compartilham o mesmo método, economizando memória e organizando melhor o código 
+
+
+- Para criar objetos, é possível usar: Factory function ou Função construtora + prototype.
+- Factory function:
+    - Vantagens => Fácil de ler, ótima para módulos pequenos
+    - Desvantagens => Cada objeto tem seus próprios métodos duplicados na memória
+- Função construtora + prototype:
+    - Vantagens => Economiza memória, É o padrão mais próximo da orientação a objetos.
+    - Desvantagens => Requer o uso de "new" e é um pouco mais verboso
