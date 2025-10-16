@@ -32,18 +32,35 @@ const moduloPersonagens = (function() {
         listaPersonagens.push(personagem)
         console.log(`${nome} foi adicionado à lista de personagens com ${HP} pontos de vida`)
     }
-    
+
    function mostraPersonagens() {
     listaPersonagens.forEach(p => {
-        console.log(p.nome)
+        console.log(`Nome: ${p.nome}`)
+        console.log(`Classe: ${p.classe}`)
+        console.log(`HP: ${p.HP}`)
+        console.log("=".repeat(20))
     })
+   }
+   function atacar(atacante, defensor) {
+    // criar variáveis que irão receber o nome do personagem (se ele estiver na lista)
+    let personagemAtacante = listaPersonagens.find(p => p.nome === atacante) // Retorna o personagem que tiver o mesmo nome de "atacante"
+    let personagemDefensor = listaPersonagens.find(p => p.nome === defensor) // Retorna o personagem que tiver o mesmo nome de "defensor"
+    if (personagemAtacante && personagemDefensor) {
+        personagemAtacante.atacar()
+        personagemDefensor.recebeDano()
+        mostraPersonagens()
+    } else {
+        console.log(`Personagem(s) não encontrado(s)`)
+    }
    }
     return {
         addPersonagem,
-        mostraPersonagens
+        mostraPersonagens,
+        atacar
     }
 })()
 
 const p1 = moduloPersonagens.addPersonagem("Mikey", "Mago")
 const p2 = moduloPersonagens.addPersonagem("Kojiro", "Espadachim")
 moduloPersonagens.mostraPersonagens()
+moduloPersonagens.atacar("Mikey", "Kojiro")
