@@ -1,20 +1,14 @@
-/* Nível 4 — Projeto completo
-🏪 7. Sistema de Loja (Projeto Final)
-Monte um módulo completo combinando tudo:
-Factory Function → cria produtos (nome, preço, estoque);
-Prototype → adiciona métodos como vender(qtd) e repor(qtd);
-Module Pattern + IIFE → controla a lista de produtos e mantém os dados privados;
-Métodos públicos: adicionarProduto, listarProdutos, venderProduto(nome, qtd).
-💡 Use forEach para exibir o estoque e find para localizar produtos pelo nome. */
 
-// Vou usar função construtora e prototype para fazer os produtos
+
 // Construtora de objeto
 function Produto(nome, preco, qtdEstoque) {
     this.nome = nome
     this.preco = preco
     this.qtdEstoque = qtdEstoque
-    console.log(`Produto ${this.nome} criado`)
-    console.log()
+    console.log(`Produto "${this.nome}" adicionado ao estoque`)
+    console.log(`Preço: ${this.preco}`)
+    console.log(`Quantidade adicionada ao estoque: ${this.qtdEstoque}`)
+    console.log("=".repeat(40))
 }
 // Métodos do protótipo
 Produto.prototype.vender = function(qtdVendida) {
@@ -32,6 +26,24 @@ Produto.prototype.repor = function(qtdReposta) {
     console.log(`Quantida resposta no estoque: ${qtdReposta}`)
     console.log(`Quantidade atual em estoque: ${this.qtdEstoque} `)
 }
-const p1 = new Produto("Lápis", 10.50, 10)
+
+//Módulo:
+let moduloEstoque = (function() {
+    let listaProdutos = []
+
+    function addProduto(parametroProduto, parametroPreco, parametroQtdEstoque) {
+        let produto = new Produto(parametroProduto, parametroPreco, parametroQtdEstoque)
+        listaProdutos.push(produto)
+    }
+
+    return {
+        addProduto
+    }
+})()
+
+/* const p1 = new Produto("Lápis", 10.50, 10)
 p1.vender(9)
-p1.repor(20)
+p1.repor(20) */
+
+// Tentar chamar a função addProduto e fazer o mesmo das linhas 42 até 44
+const p1 = moduloEstoque.addProduto("Lápis", 10.50, 10)
