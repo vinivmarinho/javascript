@@ -25,11 +25,3 @@
 
 
 
-/* Nível 4 — Projeto completo
-🏪 7. Sistema de Loja (Projeto Final)
-Monte um módulo completo combinando tudo:
-Factory Function → cria produtos (nome, preço, estoque);
-Prototype → adiciona métodos como vender(qtd) e repor(qtd);
-Module Pattern + IIFE → controla a lista de produtos e mantém os dados privados;
-Métodos públicos: adicionarProduto, listarProdutos, venderProduto(nome, qtd).
-💡 Use forEach para exibir o estoque e find para localizar produtos pelo nome. */
