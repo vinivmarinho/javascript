@@ -1,0 +1,10 @@
+- .push() => Adiciona um elemento na lista
+- .pop() => Remove o último elemento
+- .unshift() => Adiciona elemento(s) no início do array. Retorna: Novo tamanho do array
+- .shift() => Remove o primeiro elemento do array. Retorna o elemento removido
+- .filter() => Cria um novo array com apenas os elementos que passam em um teste (condição) definido. Obs: Não altera o array original. Exemplos com filter:
+    * Com arrow function = let numerosPares = numeros.filter(n => n % 2 === 0) (OBS: o "n" antes da arrow function simboliza cada elemento dentro do array)
+    * Sem arrow function: let numerosPares = numeros.filter(function(n) {
+        return n % 2 === 0
+    })
+- .reduce() => Reduz o array a um único valor
