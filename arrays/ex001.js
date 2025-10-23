@@ -1,4 +1,6 @@
-/* Nível 1 — Fundamentos
+// Praticando manipulação de arrays:
+
+/* 
 1. Cria um array com 5 frutas e:
 Mostra o primeiro e o último item no console.
 Mostra o total de elementos.*/
@@ -12,7 +14,7 @@ console.log(array)
 
 // Cria um array de números
 let numeros = [1,2,3,4,5,6,7,8,9,10,11,12,567,458]
-let numerosPares = numeros.filter(n => n % 2 == 0)
+let numerosPares = numeros.filter(n => n % 2 == 0) // Retorna só os números pares usando o método "filter"
 console.log(numerosPares)
 let soma = numeros.reduce((acumulador, valorAtual) =>{ // Retorna a soma de todo o array usando o método "reduce"
     return acumulador + valorAtual

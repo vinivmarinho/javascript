@@ -1,12 +1,17 @@
 - .push() => Adiciona um elemento na lista
+
 - .pop() => Remove o último elemento
+
 - .unshift() => Adiciona elemento(s) no início do array. Retorna: Novo tamanho do array
+
 - .shift() => Remove o primeiro elemento do array. Retorna o elemento removido
+
 - .filter() => Cria um novo array com apenas os elementos que passam em um teste (condição) definido. Obs: Não altera o array original. Exemplos com filter:
     * Com arrow function = let numerosPares = numeros.filter(n => n % 2 === 0) (OBS: o "n" antes da arrow function simboliza cada elemento dentro do array)
     * Sem arrow function: let numerosPares = numeros.filter(function(n) {
         return n % 2 === 0
     })
+
 - .reduce() => Reduz o array a um único valor. Retorna o valor final do acumulador após percorrer todo o array. Precisa de uma função com 2 parâmetros principais:
     * Acumulador = guarda o resultado parcial enquanto percorre o array
     * valorAtual = Representa o elemento que está sendo processado no momento. Exemplos com reduce:
@@ -14,3 +19,13 @@
     * Sem arrow function = let soma = numeros.reduce(function(acumulador, valorAtual) {
         return acumulador + valorAtual
     }, 0)
+
+- .map() => Cria um novo array transformando cada elemento nele. Obs: Não altera o array original. Exemplos:
+    * Com arrow function = let quadrados = numeros.map(n => n * n)
+    * Sem arrow function = let quadrados = numeros.map(function(n){
+        return n * n
+    })
+
+- .every() => Testa todos os elementos com uma condição e retorna True (se todos passarem) e False (se algum não passar)
+- .some() => Testa todos os elementos com uma condição e retorna True (se pelo menos 1 passar) e False (se nenhum passar)
+- .forEach() => Passa por cada elemento e executa uma função(exibir, somar, modificar algo, etc...). Não retorna um novo array
