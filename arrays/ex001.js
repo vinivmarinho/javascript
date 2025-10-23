@@ -14,6 +14,7 @@ console.log(array)
 let numeros = [1,2,3,4,5,6,7,8,9,10,11,12,567,458]
 let numerosPares = numeros.filter(n => n % 2 == 0)
 console.log(numerosPares)
-let soma = numeros.reduce((acumulador, valorAtual) =>{
-    
-})
+let soma = numeros.reduce((acumulador, valorAtual) =>{ // Retorna a soma de todo o array usando o método "reduce"
+    return acumulador + valorAtual
+}, 0) 
+console.log(soma)

@@ -7,4 +7,10 @@
     * Sem arrow function: let numerosPares = numeros.filter(function(n) {
         return n % 2 === 0
     })
-- .reduce() => Reduz o array a um único valor
+- .reduce() => Reduz o array a um único valor. Retorna o valor final do acumulador após percorrer todo o array. Precisa de uma função com 2 parâmetros principais:
+    * Acumulador = guarda o resultado parcial enquanto percorre o array
+    * valorAtual = Representa o elemento que está sendo processado no momento. Exemplos com reduce:
+    * Com arrow function = let soma = numeros.reduce((acumulador, valorAtual)  => acumulador + valorAtual, 0) (obs: 0 é o valor inicial do acumulador)
+    * Sem arrow function = let soma = numeros.reduce(function(acumulador, valorAtual) {
+        return acumulador + valorAtual
+    }, 0)
