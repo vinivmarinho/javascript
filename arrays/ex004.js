@@ -1,6 +1,5 @@
 /* 8. Crie um array de objetos representando produtos (nome e preço)
-Mostre apenas os produtos com preço acima de 50 usando filter().
-Crie um novo array apenas com os nomes dos produtos usando map(). */
+Mostre apenas os produtos com preço acima de 50 usando filter().*/
 let estoque = [
     {produto: "Camisa de time", preco: 50},
     {produto: "Computador" , preco: 2500},
@@ -12,3 +11,7 @@ console.log("Produtos acima de R$50 reais: ")
 produtosCaros.forEach(elemento => {
     console.log(`elemento.produto => R$${elemento.preco} reais`)
 })
+
+// Cria um novo array apenas com os nomes dos produtos usando map().
+let nomeProdutos = estoque.map(elemento => elemento.produto) // 
+console.log(nomeProdutos)
