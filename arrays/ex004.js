@@ -9,7 +9,7 @@ let estoque = [
 let produtosCaros = estoque.filter(elemento => elemento.preco >= 50)
 console.log("Produtos acima de R$50 reais: ")
 produtosCaros.forEach(elemento => {
-    console.log(`elemento.produto => R$${elemento.preco} reais`)
+    console.log(`${elemento.produto} => R$${elemento.preco} reais`)
 })
 
 // Cria um novo array apenas com os nomes dos produtos usando map().
