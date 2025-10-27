@@ -25,3 +25,28 @@ p1.aplicarDesconto(15)
 // Retornando o protótipo dos objetos criados
 console.log(Object.getPrototypeOf(p1))
 console.log(Object.getPrototypeOf(p2))
+
+
+/* Exercício 2: Controle de Funcionários
+Crie uma função construtora Funcionario(nome, cargo, salario)
+No protótipo, adicione um método aumentarSalario(percentual) que aumenta o salário do funcionário.
+Crie dois funcionários e aplique aumentos diferentes.
+Mostre o salário antes e depois.
+💼 Isso simula um sistema de RH simples */
+
+// Função construtora
+function Funcionario(nome, cargo, salario) {
+    this.nome = nome,
+    this.cargo = cargo,
+    this.salario = salario
+    console.log(`Olá, ${this.nome}! Seja muito bem vindo a nossa empresa!`)
+}
+// Adiciona método no prototype 
+Funcionario.prototype.aumentarSalario = function(novoSalario) {
+    this.salario += novoSalario
+    console.log(`Parabéns, ${this.nome}! Você recebeu um aumento de R$${novoSalario.toFixed(2)} reais, seu novo salário é de R$${this.salario.toFixed(2)} reais`)
+}
+let f1 = new Funcionario("Vinícius", "Professor", 2500)
+let f2 = new Funcionario("Isabelly", "Engenheira", 8900)
+f1.aumentarSalario(1000)
+f2.aumentarSalario(5678.90)
