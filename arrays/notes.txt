@@ -29,3 +29,5 @@
 - .every() => Testa todos os elementos com uma condição e retorna True (se todos passarem) e False (se algum não passar)
 - .some() => Testa todos os elementos com uma condição e retorna True (se pelo menos 1 passar) e False (se nenhum passar)
 - .forEach() => Passa por cada elemento e executa uma função(exibir, somar, modificar algo, etc...). Não retorna um novo array
+- .slice() => Copia uma parte de um array e cria um novo, sem alterar o original. Exemplo: array.slice(inicio, fim)
+- .splice() => Adiciona, remove ou substitui em um array, modificando o array original. Exemplo: array.splice(inicio (onde as alterações vão acontecer), quantidade(quantos elementos serão removidos), item1, item2 (elementos que serão adicionados no lugar))
