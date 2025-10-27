@@ -1,6 +1,8 @@
 - Prototype (Protótipo):
-    - É um objeto especial que serve como modelo para outros objetos em JavaScript. Se uma propriedade ou método não existir no objeto, o JavaScript procura no seu prototype (isso é chamado de prototype chain). Obs: Atualmente a sintaxe de classes (class) é a abordagem padrão e mais comum no JS moderno, mas muitos frameworks e bibliotecas ainda utilizam funções construtoras + protótipos em seu código fonte
+    - É um objeto especial que serve como modelo para outros objetos em JS. Se uma propriedade ou método não existir no objeto, o JavaScript procura no seu prototype (isso é chamado de prototype chain). Obs: Atualmente a sintaxe de classes (class) é a abordagem padrão e mais comum no JS moderno, mas muitos frameworks e bibliotecas ainda utilizam funções construtoras + protótipos em seu código fonte
     
+- funcaoConstrutora.prototype.metodo = function() {} => Adiciona um método ao protótipo de uma função construtora. Assim todos os objetos compartilham o mesmo método (não vai ser criado um método pra cada objeto) economizando na memória e organizando melhor o código
+
 - Combinação poderosa: Funções construtoras + Protótipos, Ela Permite: criar muitos objetos com estrutura parecida, métodos são compartilhados via prototype (economizando memória), implementar  herança e  orientação a objetos no JS clássico
 
 - função construtora => é uma forma de criar objetos do mesmo tipo (ou “modelo”) sem precisar repetir o código toda vez. Por convenção, ela começa com letra maiúscula
@@ -11,4 +13,4 @@
 
 - Object.setPrototypeOf(objeto, prototipo) => Método que define manualmente o protótipo de um objeto. Obs: O uso dele não é muito recomendado em grandes sistemas porque pode deixar o código mais lento (altera o protótipo em tempo de execução)
 
-- funcaoConstrutora.prototype.metodo = function() {} => Adiciona um método ao protótipo de uma função construtora. Assim todos os objetos compartilham o mesmo método (não vai ser criado um método pra cada objeto) economizando na memória e organizando melhor o código
+
