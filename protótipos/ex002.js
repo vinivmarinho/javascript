@@ -5,7 +5,7 @@ Um método saudacao() que retorna mensagens diferentes:
 "Bem-vindo, cliente VIP!"
 "Olá, cliente regular!"
 Depois, crie uma lista de clientes e use forEach para mostrar a saudação de cada um.
-🛍️ Muito útil para sistemas de fidelidade ou CRM. */
+Muito útil para sistemas de fidelidade ou CRM. */
 
 // Função construtora
 function Cliente(nome, idade, tipo) {
@@ -32,5 +32,6 @@ let c6 = new Cliente("Criança", 12, "Regular")
 // Adiciona os clientes na lista
 let clientes = [c1, c2, c3, c4, c5, c6]
 clientes.forEach(cliente => {
+    // Chama o método para cada cliente da lista
     return(cliente.saudacao()) // Obs: Usa o return, pois dentro do método já tem um "console.log"
 })
