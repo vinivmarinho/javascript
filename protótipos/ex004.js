@@ -1,5 +1,5 @@
-/* Desafio Final: Sistema de Vendas
-Monte um pequeno sistema usando várias funções construtoras com protótipos:
+/* Desafio: Sistema de Vendas
+Monta um pequeno sistema usando várias funções construtoras com protótipos:
 Produto(nome, preco)
 Cliente(nome, tipo)
 Venda(cliente, produto, quantidade)
@@ -40,7 +40,7 @@ Venda.prototype.resumoDaCompra = function() {
     console.log(`Produto comprado: ${this.produto.nome}. Quantidade: ${this.qtd}`)
     console.log(`${this.calcularTotal()}`) // Chama a função que calcula o total da compra
 }
+
 let prod = new Produto("Laptop", 234.56)
 let cliente = new Cliente("Vini", "VIP")
 let venda = new Venda(cliente, prod, 3)
-venda.resumoDaCompra()
