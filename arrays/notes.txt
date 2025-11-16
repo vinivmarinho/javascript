@@ -31,4 +31,11 @@
 - .forEach() => Passa por cada elemento e executa uma função(exibir, somar, modificar algo, etc...). Não retorna um novo array
 - .slice() => Copia uma parte de um array e cria um novo, sem alterar o original. Exemplo: array.slice(inicio, fim)
 - .splice() => Adiciona, remove ou substitui em um array, modificando o array original. Exemplo: array.splice(inicio (onde as alterações vão acontecer), quantidade(quantos elementos serão removidos), item1, item2 (elementos que serão adicionados no lugar))
+- .split() => Divide uma string em partes e a transforma em um array usando um separador que é passado como parâmetro. Exemplo: string.split(separador)
+- .trim() => Remove os espaços em branco no começo e no final de uma string
+- .replace() => Substitui parte de uma string por outra. Exemplo: string.replace(valorAntigo, valorNovo)
+
+
+
+
 - O que é desestruturar um array => Pegar os valores de um array e colocar diretamente em variáveis separadas, de forma rápida e organizada. Em vez de acessar manualmente cada posição (array[0], array[1], etc.), você “desmonta” o array em partes.
