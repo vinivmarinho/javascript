@@ -27,14 +27,31 @@
     })
 
 - .every() => Testa todos os elementos com uma condição e retorna True (se todos passarem) e False (se algum não passar)
+
 - .some() => Testa todos os elementos com uma condição e retorna True (se pelo menos 1 passar) e False (se nenhum passar)
+
 - .forEach() => Passa por cada elemento e executa uma função(exibir, somar, modificar algo, etc...). Não retorna um novo array
+
 - .slice() => Copia uma parte de um array e cria um novo, sem alterar o original. Exemplo: array.slice(inicio, fim)
-- .splice() => Adiciona, remove ou substitui em um array, modificando o array original. Exemplo: array.splice(inicio (onde as alterações vão acontecer), quantidade(quantos elementos serão removidos), item1, item2 (elementos que serão adicionados no lugar))
+
+- .splice() => Adiciona, remove ou substitui em um array. Exemplo: array.splice(inicio (onde as alterações vão acontecer), quantidade(quantos elementos serão removidos), item1, item2 (elementos que serão adicionados no lugar)). OBS: Modifica o array original e retorna os itens removidos
+
 - .split() => Divide uma string em partes e a transforma em um array usando um separador que é passado como parâmetro. Exemplo: string.split(separador)
+
 - .trim() => Remove os espaços em branco no começo e no final de uma string
+
 - .replace() => Substitui parte de uma string por outra. Exemplo: string.replace(valorAntigo, valorNovo)
 
+- .toLowerCase() => transforma todas as letras maiúsculas em minúsculas
+
+- .toUpperCase() => Transforma todas as letras minúsculas em maiúsculas
+
+- .join() => transforma todos os elementos do array em uma única string, usando um separador que você escolher. Exemplo: lista.join(separador)
+
+- .sort() => ordena tudo como STRING, mesmo que sejam números. Para ordenar números de forma certa, você precisa passar uma função de comparação. Ordem crescente = numeros.sort((a, b) => a - b). Ordem decrescente = numeros.sort((a, b) => b - a)
+
+- .includes() => Verifica se um valor existe dentro de um array ou dentro de uma string. Retorna true ou false e é case sensitive.
+- .concat() => Junta valores sem modificar o original. Usado para juntar arrays e strings
 
 
 
