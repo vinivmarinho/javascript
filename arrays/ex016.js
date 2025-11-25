@@ -7,4 +7,8 @@
 let nomes1 = ["Vinícius", "Isa", "Fulano"];
 let nomes2 = ["Marinho", "Haddad", "Ciclano"];
 let nomesCompletos = nomes1.concat(nomes2); // Concatenando as 2 arrays
-console.log(nomesCompletos);
+let nomesComFinalO = nomesCompletos.filter((nome) => nome[nome.length - 1] === "o");
+console.log(nomesComFinalO);
+let nomesMaiusculos = nomesComFinalO.map((nome) => nome.toUpperCase());
+console.log(nomesMaiusculos);
+console.log(nomesMaiusculos.length);
