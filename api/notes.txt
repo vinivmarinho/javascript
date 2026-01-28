@@ -1,0 +1,42 @@
+1- O que é uma API(Application Programming interface) => É uma forma de comunicação entre sistemas. Em aplicações web, normalmente usa-se APIs Web (geralmente usando HTTP), que funcionam assim:
+    - O cliente(o site React) faz uma requisição
+    - O servidor responde com dados (geralmente JSON)
+- Exemplo de API => https://api.exemplo.com/usuarios
+
+2- HTTP(Hyper text transfer protocol) => Protocolo de comunicação da web. Métodos mais usados:
+    - GET => Busca dados
+    - POST => Envia dados
+    - PUT / PATCH => Atualiza dados
+    - DELETE => Remove dados
+
+    - Status comuns:
+        - 200 => Sucesso
+        - 400 => Erro do cliente
+        - 401 => Não autorizado
+        - 404 => Não encontrado
+        - 500 => Erro do servidor
+
+
+3- Fetch API (JS puro) => A Fetch API é nativa do JS, ela é usada para fazer requisições HTTP. Exemplo básico de uso:
+    fetch("https://api.exemplo.com/data") 
+        .then(response => response.json()) 
+        .then(data => console.log(data))
+        .catch(error => console.error(error))
+
+
+    - Exemplo com async/await(recomendada):
+        async function obterDados() {
+            try{
+                const response = await fetch(url)
+                const data = await response.json()
+                console.log(data)
+            } catch (error) {
+                console.error(error)
+            }
+        }
+4- Função assíncrona => É uma função que não trava o programa enquanto espera algo demorado acontecer. Ela permite o uso do "await" e sempre retorna uma "Promise".
+5- Await diz => espere determinada "Promise" terminar antes de continuar:
+    const response = await fetch(url)
+    A função espera a resposta, o restante do código só roda depois e o navegador não trava
+
+6- APIs geralmente retornam JSON, no JS "response.json()" converte JSON em objeto JS.
